@@ -1,5 +1,5 @@
 const API_KEY = process.env.API_KEY;
-import Result from "@/components/Result";
+import Results from "@/components/Results";
 import React from "react";
 
 export default async function Home({ searchParams }) {
@@ -12,7 +12,6 @@ export default async function Home({ searchParams }) {
   );
 
   const data = await response.json();
-
   if (!response.ok) {
     throw new Error("Failed to fetch data");
   }
@@ -21,7 +20,7 @@ export default async function Home({ searchParams }) {
 
   return (
     <div>
-      <Result results={results} />
+      <Results results={results} />
     </div>
   );
 }
