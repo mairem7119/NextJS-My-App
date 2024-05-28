@@ -2,7 +2,6 @@
 import React from "react";
 
 export default function Results({ results }) {
-  console.log("Results:", results);
   return (
     <div>
       {results?.map((result) => (
