@@ -7,11 +7,10 @@ export default async function MoivePage({ params }) {
   const response = await fetch(
     `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY}`
   );
-  // Check if the response is okay (status 200-299)
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
-
+  // // Check if the response is okay (status 200-299)
+  // if (!response.ok) {
+  //   throw new Error(`HTTP error! status: ${response.status}`);
+  // }
   const movie = await response.json();
 
   return (
