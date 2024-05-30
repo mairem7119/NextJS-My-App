@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Results from "@/components/Results";
 import SearchBox from "@/components/SearchBox";
 import { Suspense } from "react";
+import ProgressBarProvider from "@/components/ProgressBarProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           <Suspense>
             <SearchBox />
+            <ProgressBarProvider>{children}</ProgressBarProvider>
           </Suspense>
           <Results />
           {children}
