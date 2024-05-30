@@ -2,7 +2,7 @@
 import React from "react";
 import { useEffect } from "react";
 
-export default function Error({ error, reset }) {
+export default function error({ error, reset }) {
   useEffect(() => {
     console.log(error);
   }, [error]);
